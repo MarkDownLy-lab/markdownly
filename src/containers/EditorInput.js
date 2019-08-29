@@ -5,7 +5,7 @@ import { updateMarkdown } from '../actions/markdownActions';
 
 
 const mapStateToProps = state => ({
-  markdown: getMarkdown(state)
+  documents: getMarkdown(state)
 });
 
 const mapDispatchToProps = dispatch => ({
