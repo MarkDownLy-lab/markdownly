@@ -1,13 +1,23 @@
 import React from 'react';
 import EditorInput from '../../containers/EditorInput';
+import PreviewDisplay from '../markdown/Preview';
+import PropTypes from 'prop-types';
 
-export default function Document() {
+export default function Document({ markdown, changeMarkdown }) {
   return (
     <>
-      <EditorInput />
+      <EditorInput markdown={markdown} changeMarkdown={changeMarkdown} />
+      <PreviewDisplay markdown={markdown} />
     </>
   );
 }
+
+Document.propTypes = {
+  markdown: PropTypes.string.isRequired,
+  changeMarkdown: PropTypes.func.isRequired
+};
+
+
 
 
 
