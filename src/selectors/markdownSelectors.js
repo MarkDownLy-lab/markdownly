@@ -1,3 +1,3 @@
-export const getMarkdown = state => state.markdownReducer.markdown;
 export const getDocuments = state => state.markdownReducer.documents;
+export const getDocument = state => state.markdownReducer.documents[state.markdownReducer.currentDocument];
 
