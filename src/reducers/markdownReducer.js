@@ -1,7 +1,9 @@
 import { UPDATE_MARKDOWN } from '../actions/markdownActions';
 const initialState = { 
-  markdown: []
+  markdown: '',
+  documents: [{ text: 'tab 1' }]
 };
+
 
 export default function reducer(state = initialState, action) {
   switch(action.type) {
@@ -11,3 +13,4 @@ export default function reducer(state = initialState, action) {
       return state;
   }
 }
+
