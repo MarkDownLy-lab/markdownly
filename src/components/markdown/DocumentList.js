@@ -10,7 +10,6 @@ function DocumentList({ documents }) {
     </li>
   ));
 
-  console.log('docs', documents);
   return (
   <>
     <ul>{tabList}</ul>
