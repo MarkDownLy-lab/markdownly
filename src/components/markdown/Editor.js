@@ -4,7 +4,7 @@ import styles from './Editor.css';
 
 function Editor({ markdown, changeMarkdown }) {
   return (
-    <textarea className={styles.Editor} type="text" value={markdown} onChange={changeMarkdown} styles />
+    <textarea className={styles.Editor} value={markdown} onChange={changeMarkdown} styles />
   );
 }
 
