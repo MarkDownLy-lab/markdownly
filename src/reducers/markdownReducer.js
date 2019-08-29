@@ -14,7 +14,7 @@ export default function reducer(state = initialState, action) {
     case UPDATE_MARKDOWN: 
       return { ...state, markdown: action.payload };
     case ADD_DOCUMENT:
-      return { ...state, documents: action };;
+      return { ...state, documents: action.payload };
     default:
       return state;
   }
