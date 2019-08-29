@@ -1,11 +1,11 @@
-// import { connect } from 'react-redux';
-// import Preview from '../components/markdown/Preview';
-// import { getMarkdown } from '../selectors/markdownSelectors';
+import { connect } from 'react-redux';
+import Preview from '../components/markdown/Preview';
+import { getMarkdown } from '../selectors/markdownSelectors';
 
-// const mapStateToProps = state => ({
-//   dangerouslySetInnerHTML: getMarkdown(state)
-// });
+const mapStateToProps = state => ({
+  markdown: getMarkdown(state)
+});
 
-// export default connect(
-//   mapStateToProps
-// )(Preview);
+export default connect(
+  mapStateToProps
+)(Preview);
