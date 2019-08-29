@@ -1,4 +1,4 @@
-import { UPDATE_MARKDOWN } from '../actions/markdownActions';
+import { UPDATE_MARKDOWN, ADD_DOCUMENT } from '../actions/markdownActions';
 const initialState = { 
   currentDocument: 0,
   markdown: '',
@@ -13,6 +13,8 @@ export default function reducer(state = initialState, action) {
   switch(action.type) {
     case UPDATE_MARKDOWN: 
       return { ...state, markdown: action.payload };
+    case ADD_DOCUMENT:
+      return { ...state, documents: action };;
     default:
       return state;
   }
