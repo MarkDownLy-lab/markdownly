@@ -1,6 +1,6 @@
 import { UPDATE_MARKDOWN } from '../actions/markdownActions';
 const initialState = { 
-  markdown: 'Type Here'
+  markdown: []
 };
 
 export default function reducer(state = initialState, action) {
