@@ -5,7 +5,7 @@ function DocumentList({ documents }) {
   const tabList = documents.map((document, i) => (
     <li key={i}>
       <button>
-        {document.text}
+        {document.title}
       </button>
     </li>
   ));
