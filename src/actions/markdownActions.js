@@ -4,3 +4,8 @@ export const updateMarkdown = markdown => ({
   payload: markdown
 });
 
+export const ADD_DOCUMENT = 'ADD_DOCUMENT';
+export const addDocument = document => ({
+  type: ADD_DOCUMENT,
+  payload: document
+});
