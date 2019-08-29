@@ -1,7 +1,8 @@
 import { UPDATE_MARKDOWN } from '../actions/markdownActions';
 const initialState = { 
+  currentDocument: 0,
   markdown: '',
-  documents: [{ text: 'tab 1' }]
+  documents: [{ text: 'tab 1', id: 0 }]
 };
 
 
