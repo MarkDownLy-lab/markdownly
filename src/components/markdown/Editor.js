@@ -2,16 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Editor.css';
 
-function Editor({ documents, changeMarkdown }) {
+function Editor({ document, changeMarkdown }) {
   return (
     <div>
-      <textarea className={styles.Editor} value={documents} onChange={changeMarkdown} />
+      <textarea className={styles.Editor} value={document.text} onChange={changeMarkdown} />
     </div>
   );
 }
 
 Editor.propTypes = {
-  documents: PropTypes.string.isRequired,
+  document: PropTypes.object.isRequired,
   changeMarkdown: PropTypes.func.isRequired
 };
 
