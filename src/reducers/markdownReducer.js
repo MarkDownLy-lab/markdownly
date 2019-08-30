@@ -3,9 +3,7 @@ const initialState = {
   currentDocument: 0,
   markdown: '',
   documents: [
-    { title:'tab 1', text: 'hello', id: 0 }, 
-    { title:'tab 2', text: 'hi', id: 1 }
-  ]
+    { title:'tab 1', text: 'whatever', id: 0 }]
 };
 
 
@@ -14,7 +12,7 @@ export default function reducer(state = initialState, action) {
     case UPDATE_MARKDOWN: 
       return { ...state, markdown: action.payload };
     case ADD_DOCUMENT:
-      return { ...state, documents: action.payload };
+      return { ...state, documents: [...state.documents, { title: action.payload, text: '', id: state.documents.length }] };
     default:
       return state;
   }
