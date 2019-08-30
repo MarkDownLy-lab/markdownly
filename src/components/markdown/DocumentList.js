@@ -1,20 +1,24 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
-function DocumentList() {
+function DocumentList({ documents }) {
+  const tabList = documents.map((document, i) => (
+    <li key={i}>
+      <button>
+        {document.title}
+      </button>
+    </li>
+  ));
+
   return (
-    <>
-      <ul>
-        <li>tab1</li>;
-        <li>tab2</li>;
-        <li>tab3</li>;
-      </ul>
-    </>
+  <>
+    <ul>{tabList}</ul>
+  </>
   );
 }
 
-// DocumentList.propTypes = {
-//   documents: PropTypes.array.isRequired
-// };
+DocumentList.propTypes = {
+  documents: PropTypes.array.isRequired
+};
 
 export default DocumentList;
